@@ -846,7 +846,6 @@ function goBack(): void {
           <div class="md:col-span-2">
             <label class="block text-xs text-themed-muted mb-1.5">{{ t('admin.packages.descLabel') }}</label>
             <input v-model="form.description" type="text" class="input" />
-            <p class="text-xs text-orange-500 dark:text-orange-400 mt-1">{{ t('common.noIncudalHint') }}</p>
           </div>
           <div v-if="!isEditMode" class="md:col-span-2">
             <label class="block text-xs text-themed-muted mb-2">{{ t('packageForm.fields.packageCreationMode') }}</label>
