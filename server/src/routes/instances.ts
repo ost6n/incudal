@@ -1949,7 +1949,8 @@ export default async function instanceRoutes(fastify: FastifyInstance) {
       }
 
       // 查询 AFF 绑定，获取折扣率
-      const affBinding = await db.getInstanceAffBinding(instanceId)
+      const affEnabled = await db.isAffRebateEnabled()
+      const affBinding = affEnabled ? await db.getInstanceAffBinding(instanceId) : null
       if (affBinding) {
         hasAffBinding = true
         affDiscountRate = Number(affBinding.affCode.discountRate)

@@ -2119,6 +2119,7 @@ const api = {
       turnstileSiteKey?: string | null
       ticketEnabled?: boolean
       freeSiteMode?: boolean
+      affRebateEnabled?: boolean
       mailAvailable?: boolean
       avatarApiBase?: string
       emailVerificationEnabled?: boolean
